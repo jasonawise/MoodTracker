@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
   
-  @State private var selectedRating = 1
+  @ObservedObject var trackingModel = TrackingModel()
   
     var body: some View {
-      List {
-        Picker("Mood Rating", selection: $selectedRating ) {
-          ForEach(1..<11) {
-            Text("\($0)").tag($0)
+      VStack {
+        List {
+          Picker("Mood Rating", selection: $trackingModel.selectedRating ) {
+            ForEach(1..<11) {
+              Text("\($0)").tag($0)
+            }
           }
+          
+          DatePicker(selection: $trackingModel.trackingDate, displayedComponents: [.date], label: { /*@START_MENU_TOKEN@*/Text("Date")/*@END_MENU_TOKEN@*/ })
         }
       }
     }
