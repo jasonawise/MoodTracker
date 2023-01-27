@@ -19,7 +19,6 @@ struct ContentView: View {
               Text("\($0)").tag($0)
             }
           }
-          
           DatePicker(selection: $trackingModel.trackingDate, displayedComponents: [.date], label: { /*@START_MENU_TOKEN@*/Text("Date")/*@END_MENU_TOKEN@*/ })
         }
       }

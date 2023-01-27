@@ -86,6 +86,8 @@
 			dependencies = (
 			);
 			name = MoodTracker;
+			packageProductDependencies = (
+			);
 			productName = MoodTracker;
 			productReference = 2C74668F29834E15001E2366 /* MoodTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +116,8 @@
 				Base,
 			);
 			mainGroup = 2C74668629834E15001E2366;
+			packageReferences = (
+			);
 			productRefGroup = 2C74669029834E15001E2366 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
