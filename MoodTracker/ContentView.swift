@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  @State private var selectedRating = 1
+  
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+      List {
+        Picker("Mood Rating", selection: $selectedRating ) {
+          ForEach(1..<11) {
+            Text("\($0)").tag($0)
+          }
         }
-        .padding()
+      }
     }
 }
 
